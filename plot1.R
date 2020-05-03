@@ -12,3 +12,5 @@ x<-rbind(x1,x2)
 x$Global_active_power<-as.numeric(as.character(x$Global_active_power))
 #create histogram
 hist(x$Global_active_power,main='Global Active Power',col='red',xlab='Global Active Power (kilowatts)')
+dev.copy(png,'plot1.png')
+dev.off()

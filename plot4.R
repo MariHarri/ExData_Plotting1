@@ -25,4 +25,6 @@ lines(newdata$fullTime,as.numeric(as.character(newdata$Sub_metering_3)),col='blu
 legend('topright',legend=c('Sub_metering_1','Sub_metering_2','Sub_metering_3'),lty=1,col=c('black','red','blue'))
 #add fourth plot, converting global reactive power to numeric from factor
 plot(newdata$fullTime,as.numeric(as.character(newdata$Global_reactive_power)),xlab='datetime',ylab='Global_reactive_power',type='l')
+dev.copy(png,'plot4.png')
+dev.off()
 

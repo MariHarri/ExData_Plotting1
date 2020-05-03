@@ -14,3 +14,5 @@ x$Global_active_power<-as.numeric(as.character(x$Global_active_power))
 newdata<-x[order(x$fullTime),]
 #create plot
 plot(newdata$fullTime,newdata$Global_active_power,xlab='',ylab='Global Active Power (kilowatts)',type='l')
+dev.copy(png,'plot2.png')
+dev.off()
